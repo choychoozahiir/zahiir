@@ -23,36 +23,70 @@ nav a {
 }
 
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 300px;
     position: relative;
-    color: #ffffff;
+    height: 300px;
+    color: #003366;
     text-align: center;
     padding: 100px 20px;
+    overflow: hidden; /* Prevents overflow if needed */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('campus.jpg') no-repeat center center/cover;
+    opacity: 0.5; /* Adjust the opacity for the fade effect */
+    z-index: -1; /* Places the pseudo-element behind the content */
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 3.5em;
+}
+
+.hero p {
+    font-size: 1.5em;
 }
 
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
-}
-
-.content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
-.content div {
+.icon-box {
     background: #ffffff;
-    padding: 20px;
+    width: 30%;
     margin: 10px;
-    flex: 1;
+    padding: 20px;
+    text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.icon-box:hover {
+    transform: scale(1.05);
+    background-color: #003366;
+    color: #ffffff;
+}
+
+.icon-box h2 {
+    margin: 10px 0;
+}
+
+.icon-image {
+    width: 100px; /* Adjust the size of the icons as needed */
+    height: 100px; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the image and text */
 }
 
 footer {
@@ -64,3 +98,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+

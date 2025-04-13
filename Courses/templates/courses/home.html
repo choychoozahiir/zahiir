@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -5,13 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Name</title>
-    <link rel="stylesheet" href={% static 'courses/style.css' %}>
+    <title>ATZ University</title>
+    <link rel="stylesheet" href="{% static 'courses/style.css' %}">
 </head>
 <body>
 
 <header>
-    <h1>University Name</h1>
+    <h1>ATZ University</h1>
     <nav>
         <a href="#about">About Us</a>
         <a href="#admissions">Admissions</a>
@@ -22,43 +23,45 @@
 </header>
 
 <div class="hero">
-    <h1>Welcome to University Name</h1>
+    <h1>Welcome to ATZ University</h1>
     <p>Your future starts here</p>
 </div>
 
 <div class="container">
-    <div class="content">
-        <div>
-            <h2>About Us</h2>
-            <p>Learn more about our history, mission, and values.</p>
-        </div>
-        <div>
-            <h2>Admissions</h2>
-            <p>Find out how to apply and join our community.</p>
-        </div>
-        <div>
-            <h2>Academics</h2>
-            <p>Explore our programs and courses offered.</p>
-        </div>
+    <div class="icon-box" onclick="location.href='#about'">
+        <h2>About Us</h2>
+        <img src="{% static 'courses/about-icon.png' %}" alt="About Us" class="icon-image">
+        <p>Learn more about our history, mission, and values.</p>
     </div>
-    <div class="content">
-        <div>
-            <h2>Research</h2>
-            <p>Discover our research initiatives and projects.</p>
-        </div>
-        <div>
-            <h2>Campus Life</h2>
-            <p>Get involved in student organizations and activities.</p>
-        </div>
-        <div>
-            <h2>Contact Us</h2>
-            <p>Reach out for more information or assistance.</p>
-        </div>
+    <div class="icon-box" onclick="location.href='#admissions'">
+        <h2>Admissions</h2>
+        <img src="{% static 'courses/admissions-icon.png' %}" alt="Admissions" class="icon-image">
+        <p>Find out how to apply and join our community.</p>
+    </div>
+    <div class="icon-box" onclick="location.href='#academics'">
+        <h2>Academics</h2>
+        <img src="{% static 'courses/academics-icon.png' %}" alt="Academics" class="icon-image">
+        <p>Explore our programs and courses offered.</p>
+    </div>
+    <div class="icon-box" onclick="location.href='#research'">
+        <h2>Research</h2>
+        <img src="{% static 'courses/research-icon.png' %}" alt="Research" class="icon-image">
+        <p>Discover our research initiatives and projects.</p>
+    </div>
+    <div class="icon-box" onclick="location.href='#campus-life'">
+        <h2>Campus Life</h2>
+        <img src="{% static 'courses/campus-life-icon.png' %}" alt="Campus Life" class="icon-image">
+        <p>Get involved in student organizations and activities.</p>
+    </div>
+    <div class="icon-box" onclick="location.href='#contact'">
+        <h2>Contact Us</h2>
+        <img src="{% static 'courses/contact-icon.png' %}" alt="Contact Us" class="icon-image">
+        <p>Reach out for more information or assistance.</p>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2023 University Name. All rights reserved.</p>
+    <p>&copy; 2023 ATZ University. All rights reserved.</p>
 </footer>
 
 </body>
